@@ -2,8 +2,9 @@
   "name": "srinivasapp",
   "version": "0.0.0",
   "scripts": {
+    "postinstall": "ng build --aot -prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,6 +13,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^6.0.3",
+    "@angular/cli": "~6.0.8",
     "@angular/common": "^6.0.3",
     "@angular/compiler": "^6.0.3",
     "@angular/core": "^6.0.3",
@@ -21,7 +23,9 @@
     "@angular/platform-browser-dynamic": "^6.0.3",
     "@angular/router": "^6.0.3",
     "core-js": "^2.5.4",
+    "express": "^4.16.3",
     "rxjs": "^6.0.0",
+    "typescript": "~2.7.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
@@ -44,5 +48,9 @@
     "protractor": "~5.3.0",
     "ts-node": "~5.0.1",
     "tslint": "~5.9.1"
+  },
+  "engines": {
+    "node": "8.11.2",
+    "npm": "6.1.0"
   }
 }
